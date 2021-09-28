@@ -6,7 +6,7 @@ namespace Microsoft.Maui.Essentials
 	public static partial class Vibration
 	{
 		internal static bool IsSupported
-			=> Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice") && DefaultDevice != null;
+			=> global::Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice") && DefaultDevice != null;
 
 		static VibrationDevice DefaultDevice =>
 			throw new NotImplementedException("WINUI"); //VibrationDevice.GetDefault();

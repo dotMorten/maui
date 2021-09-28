@@ -15,7 +15,7 @@ namespace Microsoft.Maui.Essentials
 		{
 			try
 			{
-				if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent(vibrationDeviceApiType)
+				if (global::Windows.Foundation.Metadata.ApiInformation.IsTypePresent(vibrationDeviceApiType)
 					&& await VibrationDevice.RequestAccessAsync() == VibrationAccessStatus.Allowed)
 				{
 					var controller = (await VibrationDevice.GetDefaultAsync())?.SimpleHapticsController;
